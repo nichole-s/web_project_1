@@ -8,6 +8,9 @@
   /* this ensures that all content is centered on screens wider than 1600px */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+ul{
+  list-style-type: none;
+}
 .header {
   height: 100vh;
   min-height: 600px;
@@ -15,6 +18,7 @@
   background-color: #f2f2f2;
   /* parameters for the header section */
   display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -93,13 +97,12 @@
   min-width: 784px;
 }
 .digits{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.title{
+  margin: 100px auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;  
+}
+.section-title{
   line-height: 69px;
   font-size: 60px;
   font-weight: bold;
@@ -107,15 +110,15 @@
 }
 .digits__title{
   margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
 }
-.subtitle{
-  display: flex;
-  justify-content: center;
+.section-subtitle{
+  text-align: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   width: 60%;
-  margin-top: 20px;
 }
 .digits__subtitle{
   padding-top: 20px;;
@@ -149,14 +152,16 @@
   font-weight: normal;
   margin-top: 20px;
 }
-.feynmann{
+.feynman{
+  position: relative;
   background-color: #f2f2f2;
   height:790px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-image: url(../images/feynman.png);
+  background-size: 876px 637px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
-.feynmann__title{
+.feynman__title{
   width: 775px;
   margin-top: 100px;
   margin: auto;
@@ -164,70 +169,66 @@
   font-size: 120px;
   font-weight: bold;
   text-align: center;
-  z-index: 1;
 }
-.feynmann__subtitle{
+.feynman__subtitle{
   margin: auto;
   margin-top: 70px;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
   text-align: center;
-  z-index: 1;
 }
-.feynmann__link{
+.feynman__link{
   position: absolute;
   top: 50%;
   right: 48px;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-  color: #2f80ed;
-  z-index: 1;
-}
-.feynmann__image{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 867px;
-  height: 637px;
-  z-index: 0;
+  color: #000000;
+  text-decoration: none;
 }
 .kaufman{
+  position: relative;
   background-color: #1f1f1f;
   color: #f2f2f2;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  z-index: 0;
+  align-items: center;
 }
 .kaufman__title_theme_dark{
   margin-top: 90px;
+  z-index:2;
+  text-align: center;
 }
-/* I was able to do all formatting for .kaufman__subtitle_theme_dark in either .kaufman or .subtitle*/
+.kaufman__subtitle_theme_dark{
+  text-align: center;
+}
 .kaufman__table_theme_dark{
   margin-bottom: 90px;
-  z-index: 3;
+  z-index: 2;
 }
 /* including elements with key-value modifiers */
 .table__cell_theme_dark {
   width: 200px;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 2;
 }
 .kaufman__triangle{
   position: absolute;
   top: 10px;
   right: -210px;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 .footer{
-  max-width: 711px;
   min-height: 350px;
   background-color: #1f1f1f;
-  color: #f2f2f2;
   font-size: 18px;
+  position: relative;
+  color: white;
+  text-decoration: none;
 }
 .footer__columns{
   display: flex;
@@ -251,12 +252,15 @@
   margin-top: 0;
   line-height: 45px;
   font-weight: bold;
+  color: white;
 }
 .footer__column_links{
   margin-top: 20px;
   margin-bottom: 16px;
   line-height: 30px;
   font-weight: normal;
+  color: white;
+  text-decoration: none;
 }
 .footer__column_info{
   display: flex;
@@ -269,15 +273,17 @@
   margin-right: 10px;
 }
 .logo__place_footer{
+  display: flex;
+  flex-basis: 711px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 64px;
   width: 183px;
   height: 35px;
 }
 .footer__author{
   position: absolute;
-  left: 0;
+  left: 64px;
   bottom: 0;
   line-height: 25px;
   font-weight: normal;
