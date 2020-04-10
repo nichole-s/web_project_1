@@ -7,54 +7,57 @@
   margin: 0 auto;
   /* this ensures that all content is centered on screens wider than 1600px */
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  text-decoration-color: #000000;
 }
-
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
   /* parameters for the header section */
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.logo{
+  position: absolute;
 }
 .logo__place_header{
-  position: absolute;
   top: 30px;
   left: 64px;
-  z-index: 1;
   max-width: 154px;
   max-height: 31px;
+  z-index: 3;
 }
 .header__title{
-  position:flex;
-  align-self:center;
+  align-items: center;
   margin-left:64px;
-  max-width:730px;
+  width:730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
+  z-index: 3;
 }
 .header__subtitle{
   position:absolute;
   left: 64px;
   bottom: 30px;
   max-width: 388px;
-  z-index: 1;
+  z-index: 3;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
 }
 .header__link{
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: normal;
-  text-decoration-color: #2f80ed;
-  z-index: 1;
+  text-decoration: none;
+  color: #2f80ed;
 }
 .header__main-illustration{
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 765px;
+  height: 608px;
+  z-index: 2;
 }
 /* here we have two examples of selectors in order to remind you how to set styles for elements */
 .header__square-pic {
@@ -64,24 +67,24 @@
   top: 64px;
   right: 0px;
   background-color: #2f80ed;
-  z-index: 0;
+  z-index: 1;
 }
 .two-columns{
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px auto;
 }
 .two-columns__brief{
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   max-width: 175px;
-  text-decoration-color: #2f80ed;
+  color: #2f80ed;
 }
 .two-columns__main-text{
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: space-between;
   line-height: 34px;
   font-size: 24px;
@@ -95,6 +98,8 @@
   justify-content: center;
 }
 .title{
+  display: flex;
+  justify-content: center;
   line-height: 69px;
   font-size: 60px;
   font-weight: bold;
@@ -104,19 +109,24 @@
   margin-top: 100px;
 }
 .subtitle{
+  display: flex;
+  justify-content: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   width: 60%;
   margin-top: 20px;
 }
+.digits__subtitle{
+  padding-top: 20px;;
+
+}
 .digits__table{
   margin-bottom: 100px;
 }
 .table{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   width: 1100px;
   margin: auto;
@@ -125,14 +135,14 @@
   margin-top: 60px;
   width: 250px;
 }
-.table__cell{
-  text-justify: left;
-}
+/*I didn't find anything to put for .table__cell that seemed to be useful for both locations*/
+/* I didn't find anything to put for .digits__heading that wouldn't also work for .table__heading*/
 .table__heading{
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
 }
+/*I didn't find anything to put for .digits__table_text that wouldn't also work for .table__text*/
 .table__text{
   line-height: 1.2;
   font-size: 18px;
@@ -142,14 +152,18 @@
 .feynmann{
   background-color: #f2f2f2;
   height:790px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .feynmann__title{
   width: 775px;
-  border-top: 100px;
+  margin-top: 100px;
   margin: auto;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
+  text-align: center;
   z-index: 1;
 }
 .feynmann__subtitle{
@@ -158,91 +172,114 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  text-align: center;
   z-index: 1;
 }
 .feynmann__link{
   position: absolute;
-  border-top: 50%;
-  border-right: 48px;
+  top: 50%;
+  right: 48px;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  color: #2f80ed;
+  z-index: 1;
 }
 .feynmann__image{
-width: 867px;
-height: 637px;
-border-left: 0;
-border-bottom: 0;  
-z-index: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 867px;
+  height: 637px;
+  z-index: 0;
 }
 .kaufman{
   background-color: #1f1f1f;
+  color: #f2f2f2;
   display:flex;
   flex-direction: column;
   justify-content: center;
-}
-.kaufman__triangle{
-  border-right: -210px;
-  overflow: hidden;
   z-index: 0;
 }
 .kaufman__title_theme_dark{
   margin-top: 90px;
 }
-.table__theme_dark{
+/* I was able to do all formatting for .kaufman__subtitle_theme_dark in either .kaufman or .subtitle*/
+.kaufman__table_theme_dark{
   margin-bottom: 90px;
+  z-index: 3;
 }
 /* including elements with key-value modifiers */
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
   margin-right: 0;
   margin-top: 80px;
 }
+.kaufman__triangle{
+  position: absolute;
+  top: 10px;
+  right: -210px;
+  overflow: hidden;
+  z-index: 0;
+}
 .footer{
-  display: flex;
   max-width: 711px;
   min-height: 350px;
   background-color: #1f1f1f;
+  color: #f2f2f2;
+  font-size: 18px;
 }
 .footer__columns{
+  display: flex;
+  justify-content: space-between;
   width: 90%;
   margin-top: 60px;
   margin-bottom: 40px;
+  margin: auto;
 }
 .columns__content_copyright{
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
   margin-top: 18px;
   margin-left: 0;
   margin-bottom: 18px;
   line-height: 25px;
-  font-size: 18px;
   font-weight: normal;
 }
 .footer__column_heading{
   margin-top: 0;
   line-height: 45px;
-  font-size: 18px;
   font-weight: bold;
 }
 .footer__column_links{
   margin-top: 20px;
   margin-bottom: 16px;
   line-height: 30px;
-  font-size: 18px;
   font-weight: normal;
+}
+.footer__column_info{
+  display: flex;
+  flex-flow: column nowrap;
 }
 .footer__social_icon{
   width: 16px;
   height: 16px;
+  margin-left: 0;
+  margin-right: 10px;
 }
 .logo__place_footer{
-  flex-basis: 711px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 183px;
   height: 35px;
 }
 .footer__author{
+  position: absolute;
+  left: 0;
+  bottom: 0;
   line-height: 25px;
-  font-size: 18px;
   font-weight: normal;
   margin-top: 18px;
   margin-bottom: 18px;
