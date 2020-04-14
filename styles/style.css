@@ -10,7 +10,7 @@
 }
 ul{
   list-style-type: none;
-  padding-inline-start: 0;
+  padding-left: 0;
 }
 .header {
   height: 100vh;
@@ -21,21 +21,20 @@ ul{
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
 .logo{
-  position: absolute;
+  z-index: 3;
 }
 .logo__place_header{
+  position: absolute;
   top: 30px;
   left: 64px;
-  max-width: 154px;
-  max-height: 31px;
-  z-index: 3;
+  width: 154px;
+  height: 31px;
 }
 .header__title{
   align-items: center;
-  margin-left:64px;
+  margin-left: 64px;
   width:730px;
   line-height: 96px;
   font-size: 102px;
@@ -46,7 +45,7 @@ ul{
   position:absolute;
   left: 64px;
   bottom: 30px;
-  max-width: 388px;
+  width: 388px;
   z-index: 3;
   line-height: 25px;
   font-size: 18px;
@@ -84,8 +83,9 @@ ul{
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  max-width: 175px;
+  width: 175px;
   color: #2f80ed;
+  margin-top: 0px;
 }
 .two-columns__main-text{
   display: flex;
@@ -96,66 +96,63 @@ ul{
   font-weight: normal;
   width: 80%;
   min-width: 784px;
-  margin-top: 0;
+  margin: 0 0;
 }
 .two-columns__paragraph{
-  margin-block-start: .5em;
+  align-self: flex-start;
+  margin-top: 0;
+  margin-left: 0;
+}
+.two-columns__span-accent{
+  font-weight: bold;
 }
 .digits{
-  margin: 100px auto;
+  margin: 0 auto 100px;
   display: flex;
   flex-direction: column;
   align-items: center;  
 }
 .section-title{
+  margin: 0 auto;
   line-height: 69px;
   font-size: 60px;
   font-weight: bold;
   width: 60%;
-}
-.digits__title{
-  margin-top: 100px;
-  margin-bottom: 20px;
   text-align: center;
+  z-index: 2;
 }
 .section-subtitle{
-  text-align: center;
+  margin: 20px auto 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   width: 60%;
-}
-.digits__subtitle{
-  padding-top: 20px;;
-
-}
-.digits__table{
-  margin-bottom: 100px;
+  text-align: center;
 }
 .table{
   display: flex;
   flex-flow: row wrap;
+  margin: 0 auto;
   justify-content: space-between;
   width: 1100px;
-  margin: auto;
 }
-.digits__table_cell{
-  margin-top: 60px;
+.table__cell{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 60px auto 0;
   width: 250px;
 }
-/*I didn't find anything to put for .table__cell that seemed to be useful for both locations*/
-/* I didn't find anything to put for .digits__heading that wouldn't also work for .table__heading*/
 .table__heading{
+  margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
 }
-/*I didn't find anything to put for .digits__table_text that wouldn't also work for .table__text*/
 .table__text{
+  margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin-top: 20px;
 }
 .feynman{
   position: relative;
@@ -168,16 +165,15 @@ ul{
 }
 .feynman__title{
   width: 775px;
-  margin-top: 100px;
-  margin: auto;
+  margin: 100px auto auto;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
   text-align: center;
+  padding-top: 45px;
 }
 .feynman__subtitle{
-  margin: auto;
-  margin-top: 70px;
+  margin: 70px auto auto;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -202,105 +198,81 @@ ul{
   align-items: center;
   padding-top: 90px;
   padding-bottom: 90px;
-  overflow: hidden;
 }
-.kaufman__title_theme_dark{
-  margin-top: 90px;
-  z-index:2;
-  text-align: center;
-}
-.kaufman__subtitle_theme_dark{
-  text-align: center;
-}
-.kaufman__table_theme_dark{
-  margin-bottom: 90px;
+.table__theme_dark{
   z-index: 2;
 }
 /* including elements with key-value modifiers */
 .table__cell_theme_dark {
+  margin: 80px auto 0;
   width: 200px;
-  margin-right: 0;
-  margin-top: 80px;
   z-index: 2;
 }
 .kaufman__triangle{
   position: absolute;
   top: 10px;
   right: -210px;
-  z-index: 1;
+  z-index: 0;
 }
-.footer{
-  min-height: 350px;
-  background-color: #1f1f1f;
-  font-size: 18px;
-  position: relative;
-  display: flex;
+.footer{ 
+  min-height: 350px; 
+  background-color: #1f1f1f; 
+  font-size: 18px; 
+  position: relative; 
+  display: flex; 
   justify-content: center;
   color: #f2f2f2;
-  text-decoration: none;
-}
-.footer__columns{
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin-top: 60px;
+} 
+.footer__columns{ 
+  display: flex; 
+  justify-content: space-between; 
+  width: 90%; 
+  margin-top: 60px; 
   margin-bottom: 40px;
 }
-.footer__column{
-  align-items: flex-start;
+.footer__column_content_copyright{ 
+  flex-basis: 711px; 
+  flex-flow: column nowrap; 
+  position: relative; 
+  margin-top: 18px; 
+  margin-left: 0; 
+  margin-bottom: 18px; 
+  line-height: 25px; 
+  font-weight: normal;
 }
-.footer__column_content_copyright{
-  flex-basis: 711px;
+.footer__column-heading{ 
+  margin-top: 0; 
+  margin-bottom: 0;
+  line-height: 45px; 
+  font-weight: bold; 
+} 
+.footer__column-links{ 
+  margin-top: 20px; 
+  margin-bottom: 16px; 
+  line-height: 30px; 
+  font-weight: normal; 
+} 
+.footer__column_content_info{ 
+  display: flex; 
   flex-flow: column nowrap;
-  position: relative;
-  margin-top: 18px;
-  margin-left: 0;
-  margin-bottom: 18px;
-  line-height: 25px;
-  font-weight: normal;
-  /*border: 2px solid red;*/
-}
-.footer__column_content_social{
-  align-items: left;
-  /*border: 2px solid red;*/
-}
-.footer__column-heading{
-  margin-top: 0;
-  line-height: 45px;
-  font-weight: bold;
-}
-.footer__column-links{
-  margin-top: 20px;
-  margin-bottom: 16px;
-  line-height: 30px;
-  font-weight: normal;
-  color: #f2f2f2;
-  text-decoration: none;
-}
-.footer__column_content_info{
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: left;
-  
-  /*border: 2px solid red;*/ 
-}
-.footer__social-icon{
-  width: 16px;
-  height: 16px;
-  margin-left: 0;
-  margin-right: 10px;
-}
-.logo__place_footer{
-  position: absolute;
-  width: 183px;
-  height: 35px;
-}
-.footer__author{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  line-height: 25px;
-  font-weight: normal;
-  margin-top: 18px;
+} 
+.footer__social-icon{ 
+  width: 16px; 
+  height: 16px; 
+  margin-left: 0; 
+  margin-right: 10px; 
+} 
+.logo__place_footer{ 
+  position: absolute; 
+  width: 183px; 
+  height: 35px; 
+} 
+.footer__author{ 
+  position: absolute; 
+  left: 0; 
+  bottom: 0; 
+  line-height: 25px; 
+  font-weight: normal; 
+  margin-top: 18px; 
   margin-bottom: 18px;
 }
