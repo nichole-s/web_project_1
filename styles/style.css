@@ -6,12 +6,7 @@
   /* here we've set a maximum page width */
   margin: 0 auto;
   /* this ensures that all content is centered on screens wider than 1600px */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-ul{
-  list-style-type: none;
-  padding-left: 0;
-}
+  font-family: 'Helvetica Neue', Arial, sans-serif;}
 .header {
   height: 100vh;
   min-height: 600px;
@@ -25,7 +20,7 @@ ul{
 .logo{
   z-index: 3;
 }
-.logo__place_header{
+.logo_place_header{
   position: absolute;
   top: 30px;
   left: 64px;
@@ -162,15 +157,15 @@ ul{
   background-size: 876px 637px;
   background-repeat: no-repeat;
   background-position: left bottom;
+  padding-top: 100px;
 }
 .feynman__title{
   width: 775px;
-  margin: 100px auto auto;
+  margin: auto;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
   text-align: center;
-  padding-top: 45px;
 }
 .feynman__subtitle{
   margin: 70px auto auto;
@@ -192,12 +187,18 @@ ul{
 .kaufman{
   position: relative;
   background-color: #1f1f1f;
-  color: #f2f2f2;
   display:flex;
   flex-direction: column;
   align-items: center;
   padding-top: 90px;
   padding-bottom: 90px;
+  overflow: hidden;
+}
+.section-title__theme_dark{
+  color: #f2f2f2;
+}
+.section-subtitle__theme_dark{
+  color: #f2f2f2;
 }
 .table__theme_dark{
   z-index: 2;
@@ -207,6 +208,12 @@ ul{
   margin: 80px auto 0;
   width: 200px;
   z-index: 2;
+}
+.table__heading_theme_dark{
+  color: #f2f2f2;
+}
+.table__text_theme_dark{
+  color: #f2f2f2;
 }
 .kaufman__triangle{
   position: absolute;
@@ -221,7 +228,6 @@ ul{
   position: relative; 
   display: flex; 
   justify-content: center;
-  color: #f2f2f2;
 } 
 .footer__columns{ 
   display: flex; 
@@ -239,22 +245,30 @@ ul{
   margin-bottom: 18px; 
   line-height: 25px; 
   font-weight: normal;
-}
+} 
 .footer__column-heading{ 
   margin-top: 0; 
   margin-bottom: 0;
   line-height: 45px; 
-  font-weight: bold; 
+  font-weight: bold;
+  color: #f2f2f2;
 } 
 .footer__column-links{ 
   margin-top: 20px; 
-  margin-bottom: 16px; 
-  line-height: 30px; 
-  font-weight: normal; 
+  margin-bottom: 16px;
+  margin-left: 0;
+  line-height: 30px;
+  padding-left: 0;
+  list-style-type: none;
+}
+.footer__column-link{
+  text-decoration: none;
+  color: #f2f2f2;
 } 
 .footer__column_content_info{ 
   display: flex; 
   flex-flow: column nowrap;
+  text-decoration: none;
 } 
 .footer__social-icon{ 
   width: 16px; 
@@ -262,7 +276,7 @@ ul{
   margin-left: 0; 
   margin-right: 10px; 
 } 
-.logo__place_footer{ 
+.logo_place_footer{ 
   position: absolute; 
   width: 183px; 
   height: 35px; 
@@ -275,4 +289,9 @@ ul{
   font-weight: normal; 
   margin-top: 18px; 
   margin-bottom: 18px;
+  color: #f2f2f2;
+}
+.footer__column_content_social{
+  list-style-type: none;
+  text-decoration: none;
 }
