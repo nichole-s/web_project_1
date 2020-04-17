@@ -194,13 +194,13 @@
   padding-bottom: 90px;
   overflow: hidden;
 }
-.section-title__theme_dark{
+.section-title_theme_dark{
   color: #f2f2f2;
 }
-.section-subtitle__theme_dark{
+.section-subtitle_theme_dark{
   color: #f2f2f2;
 }
-.table__theme_dark{
+.table_theme_dark{
   z-index: 2;
 }
 /* including elements with key-value modifiers */
