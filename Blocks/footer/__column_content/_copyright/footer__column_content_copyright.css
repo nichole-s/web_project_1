@@ -1,0 +1,10 @@
+.footer__column_content_copyright{ 
+    flex-basis: 711px; 
+    flex-flow: column nowrap; 
+    position: relative; 
+    margin-top: 18px; 
+    margin-left: 0; 
+    margin-bottom: 18px; 
+    line-height: 25px; 
+    font-weight: normal;
+  } 
