@@ -2,7 +2,7 @@
     margin: 50px auto -60px auto;
     list-style: none;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
-    padding-top: 50px;
-    padding-left: 0px;
+    padding:0;
 }

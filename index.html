@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning how to learn</title>
-  <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
@@ -13,8 +12,9 @@
     <h1 class="header__title">Learning how to learn</h1>
     <p class="header__subtitle">The most effective, cutting-edge learning techniques that you can apply to your daily life
       <a href="#" class="header__link">Learn more &#8594;</a>
+    </p>
     <div><img src="./images/on_the_edge.png" alt="on-the-edge" class="header__main-illustration"></div>
-    <div class="header__square-pic"></div>
+    <div class="header__square-pic rotation"></div>
   </header>
   <main class="content">
     <section class="description">
@@ -32,26 +32,26 @@
       <p class="section-subtitle">Five Strategies from Barbara Oakley</p>
       <ul class="cards">
         <li class="cards__item">
-          <img src="./images/cards-attention.png" class="cards__image">
+          <img src="./images/cards-attention.png" class="cards__image" alt="person holding book">
           <h3 class="cards__title">Two Ways of Thinking</h3>
           <p class="cards__description">Deep understanding comes from being able to toggle back and forth between focused and diffused thinking.</p>
         </li>
         <li class="cards__item">
-          <img src="./images/cards-recall.png" class="cards__image">
+          <img src="./images/cards-recall.png" class="cards__image" alt="statue">
           <h3 class="cards__title">Recall</h3>
           <p class="cards__description">Improving your ability to remember key bits of information helps to connect different parts of the brain.</p>
         </li>
         <li class="cards__item">
-          <img src="./images/cards-interliving.png" class="cards__image">
+          <img src="./images/cards-interliving.png" class="cards__image" alt="looking down the stairs to a hall">
           <h3 class="cards__title">Interleaving</h3>
           <p class="cards__description">When you learn multiple skills at the same time, they reinforce each other.</p>
         <li class="cards__item">
-          <img src="./images/cards-question.png" class="cards__image">
+          <img src="./images/cards-question.png" class="cards__image" alt="standing alone in a room">
           <h3 class="cards__title">Questions</h3>
           <p class="cards__description">When listening to your teacher, think up a good question, something that you're really itching to know.</p>
         </li>
         <li class="cards__item">
-          <img src="./images/cards-competence.png" class="cards__image">
+          <img src="./images/cards-competence.png" class="cards__image" alt="hand holding a stack of books">
           <h3 class="cards__title">Illusion of Competence</h3>
           <p class="cards__description">Test yourself, write it down, tell other people, and repeat the process in different settings. Only then can you be truly certain you've understood something.</p>
         </li>
@@ -60,9 +60,9 @@
     <section class="video">
       <h2 class="section-title">TED talks</h2>
       <p class="section-subtitle">For lovers of procrastination</p>
-      <ul class="iframes">
-        <li class="iframe"><iframe width="560" height="315" src="https://www.youtube.com/embed/5MgBikgcWnY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-        <li class="iframe"><iframe width="560" height="315" src="https://www.youtube.com/embed/arj7oStGLkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+      <ul class="video__iframes">
+        <li><iframe width="560" height="315" class="video__iframe" src="https://www.youtube.com/embed/5MgBikgcWnY" allowfullscreen></iframe></li>
+        <li><iframe width="560" height="315" class="video__iframe" src="https://www.youtube.com/embed/arj7oStGLkU" allowfullscreen></iframe></li>
       </ul>
     </section>    
     <section class="oakley">
@@ -134,9 +134,9 @@
           who are committed to improving education so students everywhere can 
           gain the skills and knowledge to be successful in school, careers and life.</p>
         <p class="khan__quote-author">George Lucas</p>
-        <p class="quote__author-subline">Filmmaker</p>
+        <p class="khan__quote-author-subline">Filmmaker</p>
         <div class="khan__book-container">
-          <img src="../images/khan-book.png" class="khan__book-pic">
+          <img src="./images/khan-book.png" class="khan__book-pic" alt="book cover of One World Schoolhouse by Salman Khan">
           <a href="https://www.amazon.com/One-World-Schoolhouse-Education-Reimagined/dp/1455508373" class="khan__buy-link">Buy book &#8594;</a>
         </div>
       </div>
@@ -186,17 +186,17 @@
           <p class="table__text table__text_theme_dark">Emphasize quantity and speed.</p>
         </li>
       </ul>
-      <div><img src="./images/triangle.svg" alt="blue triangle" class="kaufman__triangle"></div>
+      <div><img src="./images/triangle.svg" alt="blue triangle" class="kaufman__triangle rotation"></div>
     </section>
     <section class="resources">
-      <h1 class="header__title">Useful resources</h1>
-    <p class="header__subtitle">Further materials on learning techniques and hacks.</p>
-    <ul class="resources__logo-zone">
-      <li class="resources__logo"><img src="./images/resources-tedED.png"></li>
-      <li class="resources__logo"><img src="./images/resources-Medium.png"></li>
-      <li class="resources__logo"><img src="./images/resources-dezeen.png"></li>
-      <li class="resources__logo"><img src="./images/resources-goodreads.png"></li>
-    </ul>     
+      <h2 class="section-title">Useful resources</h2>
+      <p class="section-subtitle">Further materials on learning techniques and hacks.</p>
+      <ul class="resources__logo-zone">
+        <li><img src="./images/resources-tedED.png" class="resources__logo" alt="tedED logo"></li>
+        <li><img src="./images/resources-Medium.png" class="resources__logo" alt="Medium logo"></li>
+        <li><img src="./images/resources-dezeen.png" class="resources__logo" alt="deZeen logo"></li>
+        <li><img src="./images/resources-goodreads.png" class="resources__logo" alt="goodreads logo"></li>
+      </ul>     
     </section>
   </main>
   <footer class="footer">

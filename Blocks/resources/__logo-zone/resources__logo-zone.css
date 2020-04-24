@@ -1,4 +1,8 @@
 .resources__logo-zone {
+    display: flex;
+    flex-flow: row nowrap;
     margin: 80px auto auto auto;
     width: 1100px;
+    list-style-type: none;
+    padding: 0;
 }

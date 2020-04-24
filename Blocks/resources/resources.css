@@ -2,6 +2,11 @@
 @import url("./__logo-zone/resources__logo-zone.css");
 
 .resources {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
     margin-top: 100px;
     margin-bottom: 217px;
 }
