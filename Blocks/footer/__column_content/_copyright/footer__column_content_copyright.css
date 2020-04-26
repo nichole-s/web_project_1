@@ -1,6 +1,8 @@
 .footer__column_content_copyright{ 
     flex-basis: 711px; 
+    display: flex;
     flex-flow: column nowrap; 
+    justify-content: space-between;
     position: relative; 
     margin-top: 18px; 
     margin-left: 0; 
