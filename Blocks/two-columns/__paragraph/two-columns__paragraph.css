@@ -3,3 +3,6 @@
     margin-top: 0;
     margin-left: 0;
   }
+.two-columns__paragraph:last-child{
+  margin-bottom: 0;
+}
